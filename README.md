@@ -1,2 +1,0 @@
-# RazorPages
-First web app
