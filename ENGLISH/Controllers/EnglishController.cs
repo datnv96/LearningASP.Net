@@ -8,14 +8,17 @@ namespace ENGLISH.Controllers
 {
     public class EnglishController : Controller
     {
-        public string Wellcome(string name, int ID = 1)
-        {
-            return System.Text.Encodings.Web.HtmlEncoder.Default.Encode($"Hello {name}, ID: {ID}");
-        }
         public IActionResult Index()
         {
             return View();
         }
 
+        public IActionResult Wellcome(string name, int numTimes = 1)
+        {
+            ViewData["Message"] = "Hello" + name;
+            ViewData["NumTimes"] = numTimes;
+
+            return View();
+        }
     }
 }
