@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Text.Encodings.Web;
 using System.Threading.Tasks;
 using ENGLISH.Data;
 using Microsoft.AspNetCore.Mvc;
@@ -17,19 +18,30 @@ namespace ENGLISH.Controllers
             _context = context;
         }
 
-        public async Task<IActionResult> Index(int? id)
+
+       [HttpGet]
+       public async Task<IActionResult> Check(int ID, int Answer)
         {
-            if (id == null)
-            {
-                return NotFound();
-            }
             var test = await _context.Test
-                .FirstOrDefaultAsync(m => m.Id == id);
+                .FirstOrDefaultAsync(m => m.Id == ID);
+
+            if (test.RightAnswer == Answer)
+            {
+                ViewData["notification"] = "Right";
+            }
+            else ViewData["notification"] = "Wrong";
+
+            return View();
+        }
+        public async Task<IActionResult> Index()
+        {
+            var test = await _context.Test
+                .FromSqlRaw("select * from dbo.Test").OrderBy(id => id.Id)
+                .FirstOrDefaultAsync();
             if (test == null)
             {
                 return NotFound();
             }
-
             return View(test);
         }
     }

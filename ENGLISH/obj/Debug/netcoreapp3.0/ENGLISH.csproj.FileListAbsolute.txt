@@ -132,3 +132,4 @@ D:\.NET\RazorPages\ENGLISH\obj\Debug\netcoreapp3.0\Razor\Views\Tests\Details.csh
 D:\.NET\RazorPages\ENGLISH\obj\Debug\netcoreapp3.0\Razor\Views\Tests\Edit.cshtml.g.cs
 D:\.NET\RazorPages\ENGLISH\obj\Debug\netcoreapp3.0\Razor\Views\Tests\Index.cshtml.g.cs
 D:\.NET\RazorPages\ENGLISH\obj\Debug\netcoreapp3.0\Razor\Views\Exam\Index.cshtml.g.cs
+D:\.NET\RazorPages\ENGLISH\obj\Debug\netcoreapp3.0\Razor\Views\Exam\Check.cshtml.g.cs
