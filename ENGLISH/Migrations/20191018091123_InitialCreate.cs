@@ -17,7 +17,7 @@ namespace ENGLISH.Migrations
                     Answer2 = table.Column<string>(nullable: true),
                     Answer3 = table.Column<string>(nullable: true),
                     Answer4 = table.Column<string>(nullable: true),
-                    RightAnswer = table.Column<string>(nullable: true),
+                    RightAnswer = table.Column<int>(nullable: true),
                     Notification = table.Column<string>(nullable: true)
                 },
                 constraints: table =>

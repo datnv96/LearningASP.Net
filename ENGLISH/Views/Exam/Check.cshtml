@@ -1,0 +1,15 @@
+﻿@model ENGLISH.Models.Test
+@{
+    ViewData["Title"] = "View";
+}
+
+<h1>@ViewData["notification"]</h1>
+
+<form>
+    <div class="form-group">
+        <input type="hidden" asp-for="Id" />
+        <input type="submit" value="Privious" class="btn btn-primary" />
+        <input type="submit" value="Back" asp-controller="Exam" asp-action="Check" class="btn btn-primary" />
+        <input type="submit" value="Next" class="btn btn-primary" />
+    </div>
+</form>

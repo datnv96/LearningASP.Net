@@ -22,7 +22,7 @@ namespace ENGLISH.Models
         [Required]
         public string Answer4 { get; set; }
         [Required]
-        public string RightAnswer { get; set; }
+        public int RightAnswer { get; set; }
         public string Notification { get; set; }
     }
 }
