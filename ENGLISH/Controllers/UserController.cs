@@ -6,19 +6,25 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace ENGLISH.Controllers
 {
-    public class EnglishController : Controller
+    public class UserController : Controller
     {
+
+
         public IActionResult Index()
         {
             return View();
         }
 
-        public IActionResult Wellcome(string name, int numTimes = 1)
+        public IActionResult Register()
         {
-            ViewData["Message"] = "Hello" + name;
-            ViewData["NumTimes"] = numTimes;
-
             return View();
         }
+
+        public IActionResult Login()
+        {
+            return View();
+        }
+
+
     }
 }

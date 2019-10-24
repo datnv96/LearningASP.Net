@@ -124,8 +124,6 @@ D:\.NET\RazorPages\ENGLISH\obj\Debug\netcoreapp3.0\ENGLISH.MvcApplicationPartsAs
 D:\.NET\RazorPages\ENGLISH\obj\Debug\netcoreapp3.0\ENGLISH.Views.pdb
 D:\.NET\RazorPages\ENGLISH\obj\Debug\netcoreapp3.0\ENGLISH.dll
 D:\.NET\RazorPages\ENGLISH\obj\Debug\netcoreapp3.0\ENGLISH.pdb
-D:\.NET\RazorPages\ENGLISH\obj\Debug\netcoreapp3.0\Razor\Views\English\Index.cshtml.g.cs
-D:\.NET\RazorPages\ENGLISH\obj\Debug\netcoreapp3.0\Razor\Views\English\Wellcome.cshtml.g.cs
 D:\.NET\RazorPages\ENGLISH\obj\Debug\netcoreapp3.0\Razor\Views\Tests\Create.cshtml.g.cs
 D:\.NET\RazorPages\ENGLISH\obj\Debug\netcoreapp3.0\Razor\Views\Tests\Delete.cshtml.g.cs
 D:\.NET\RazorPages\ENGLISH\obj\Debug\netcoreapp3.0\Razor\Views\Tests\Details.cshtml.g.cs
