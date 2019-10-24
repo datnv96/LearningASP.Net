@@ -27,22 +27,36 @@ namespace ENGLISH.Controllers
 
             if (test.RightAnswer == Answer)
             {
-                ViewData["notification"] = "Right";
+                ViewData["notification"] = "Right!";
             }
-            else ViewData["notification"] = "Wrong";
+            else ViewData["notification"] = "Wrong!";
 
-            return View();
+            return View(test);
         }
-        public async Task<IActionResult> Index()
+        public async Task<IActionResult> Index(int? Id)
         {
-            var test = await _context.Test
+            if (Id == null)
+            {
+                var test = await _context.Test
                 .FromSqlRaw("select * from dbo.Test").OrderBy(id => id.Id)
                 .FirstOrDefaultAsync();
-            if (test == null)
-            {
-                return NotFound();
+
+                if (test == null)
+                {
+                    return NotFound();
+                }
+                return View(test);
             }
-            return View(test);
+            else
+            {
+                var testWithId = await _context.Test
+                    .FirstOrDefaultAsync(id => id.Id == Id);
+                if (testWithId == null)
+                {
+                    return NotFound();
+                }
+                return View(testWithId);
+            }
         }
     }
 }
