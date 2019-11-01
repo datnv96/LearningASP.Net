@@ -12,6 +12,7 @@ using Authentication.Data;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using Authentication.Hubs;
 
 namespace Authentication
 {
@@ -34,6 +35,8 @@ namespace Authentication
                 .AddEntityFrameworkStores<ApplicationDbContext>();
             services.AddControllersWithViews();
             services.AddRazorPages();
+
+            services.AddSignalR();
 
 
 
@@ -73,6 +76,7 @@ namespace Authentication
                     name: "default",
                     pattern: "{controller=Home}/{action=Index}/{id?}");
                 endpoints.MapRazorPages();
+                endpoints.MapHub<ChatHubs>("/ChatHubs");
             });
         }
     }
